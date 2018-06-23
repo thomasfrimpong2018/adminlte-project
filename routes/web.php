@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'CategoryController@index');
 
 Route::resource('/category','CategoryController');
