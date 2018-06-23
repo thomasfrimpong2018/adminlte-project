@@ -4,30 +4,66 @@
     <div class="col-md-11">
       <div class="box box-success">
         <div class="box-header with-border">
-          <h3 class="box-title">Monthly Recap Report</h3>
+          <h3 class="box-title">Recently Added Category</h3>
 
          
         </div>
         <!-- /.box-header -->
         <div class="box-body">
 
-
+                
+                        <div class='table table-responsive'>
+                            <table class='table table no-margin table-hover' id='table'>
+                                <tr>
+                                <th >No</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Created At</th>
+                                
+                                </tr>
+                               
+                               
+                                @foreach($categories as $category)
+                              <tr >
+                                
+                                <td> {{$category->title}}</td>
+                                <td> {{$category->description}}</td>
+                                <td> {{$category->created_at}}</td>
+                                <td>
+                                  <a class="show-modal btn btn-info  btn-sm" data-id={{$category->id}}  data-title={{$category->title}}  data-body={{$category->description}} >
+                                  <i class="fa fa-eye"></i>
+                               </a>
+                                 <a class="edit-modal btn btn-warning  btn-sm" data-id={{$category->id}}  data-title={{$category->title}}  data-body={{$category->description}}  >
+                                      <i class="glyphicon glyphicon-pencil"></i>
+                                   </a>
+                                   <a class="delete-modal btn btn-danger  btn-sm" data-id={{$category->id}}  data-title={{$category->title}}  data-body={{$category->description}}  >
+                                          <i class="glyphicon glyphicon-trash"></i>
+                                       </a>
+                                </td>
+                                </tr>
+                      
+                               @endforeach
+                            </table>
+                      
+                        </div>
+                      
+                      </div>
 
 
 
 
           
-        </div>
+       
         <!-- ./box-body -->
         <div class="box-footer">
-         
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                Add New
+              </button>
           </div>
         </div>
           <!-- /.row -->
 
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
-                Add New
-              </button>
+         
 
           <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
