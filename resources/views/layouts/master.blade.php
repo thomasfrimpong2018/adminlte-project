@@ -133,6 +133,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="assets/js/adminlte.min.js"></script>
 
 <script >
+  //handle the 'update' modal
  $('#modal-edit').on('show.bs.modal', function(event){
  
  var button =$(event.relatedTarget)
@@ -146,6 +147,21 @@ modal.find('.modal-body #title').val(title);
 modal.find('.modal-body #description').val(description);
 modal.find('.modal-body #id').val(id);
  });
+
+//handles the 'delete' modal
+$('#modal-delete').on('show.bs.modal', function(event){
+ 
+ var button =$(event.relatedTarget)
+ var id=button.data('id');
+ var modal=$(this);
+
+//modal.find('.modal-title').text()
+
+modal.find('.modal-body #id').val(id);
+ });
+
+
+
 
 </script>
 </body>
