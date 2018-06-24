@@ -122,7 +122,7 @@
                         <textarea name="description" class="form-control" id="description" cols="20" rows="5">
 
                         </textarea>
-
+                        <input name="id"  type="hidden" id="id">
                     </div>
 
                 </div>
