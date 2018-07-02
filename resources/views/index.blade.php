@@ -31,7 +31,7 @@
                                 <td> {{$category->created_at}}</td>
                                 <td>
                                   
-                                 <a class="edit-modal btn btn-warning  btn-sm"  data-toggle="modal" data-target="#modal-edit" data-id="{{$category->id}}"  data-title="{{$category->title}}"  data-description="{{$category->description}}"  >
+                                 <a class="edit-modal btn btn-primary  btn-sm"  data-toggle="modal" data-target="#modal-edit" data-id="{{$category->id}}"  data-title="{{$category->title}}"  data-description="{{$category->description}}"  >
                                       <i class="fa fa-pencil"></i>
                                    </a>
                                    <a class="delete-modal btn btn-danger  btn-sm" data-toggle="modal" data-target="#modal-delete" data-id="{{$category->id}}"  data-title="{{$category->title}}"  data-description="{{$category->description}}"  >
@@ -63,7 +63,7 @@
 
          <!---Insert Modal-->
 
-          <div class="modal fade" id="modal-add"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal modal-info fade" id="modal-add"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -157,8 +157,8 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Delete Category</button>
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
+            <button type="submit" class="btn btn-primary">Yes</button>
           </div>
       </form>
         </div>
